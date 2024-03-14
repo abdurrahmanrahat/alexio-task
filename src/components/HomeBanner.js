@@ -5,6 +5,9 @@ import TypingAnimation from "./TypingAnimation";
 const HomeBanner = () => {
   const { nav, changeNav } = useContext(AlexioContext);
   const activePageClass = () => ("home" === nav ? "" : "page--inactive");
+
+
+
   return (
     <div
       className={`page home-banner white-bg ${activePageClass("home")}`}
