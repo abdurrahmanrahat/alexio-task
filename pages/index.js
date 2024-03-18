@@ -50,7 +50,7 @@ const Index = () => {
       <Nav />
       <div className={`pages-stack ${toggle ? "pages-stack--open" : ""}`}>
         <HomeBanner userInfo={user?.user.about} />
-        <AboutUs />
+        <AboutUs userInfo={user?.user.about} services={user?.user.services} />
         <Services />
         <Portfolio />
         <Contact />

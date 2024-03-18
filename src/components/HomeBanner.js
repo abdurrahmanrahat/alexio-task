@@ -6,7 +6,7 @@ const HomeBanner = ({userInfo}) => {
   const { nav, changeNav } = useContext(AlexioContext);
   const activePageClass = () => ("home" === nav ? "" : "page--inactive");
 
-  console.log('userInfo', userInfo);
+  // console.log('userInfo', userInfo);
 
 
   return (
@@ -19,7 +19,7 @@ const HomeBanner = ({userInfo}) => {
         <div className="row no-gutters full-screen">
           <div className="col-lg-3 col-xl-4 blue-bg">
             <div className="d-flex align-items-end home-user-avtar v-center-box">
-              <img src={userInfo.avatar.url} title alt />
+              <img src={userInfo?.avatar.url} title alt />
             </div>
           </div>
           <div className="col-lg-9 col-xl-8">
@@ -28,7 +28,7 @@ const HomeBanner = ({userInfo}) => {
                 <div className="v-center-box d-flex align-items-center">
                   <div className="home-text">
                     <h6 className="dark-color theme-after">Hello, There</h6>
-                    <h1 className="dark-color blue-after">I'm {userInfo.name}</h1>
+                    <h1 className="dark-color blue-after">I'm {userInfo?.name}</h1>
                     <p>
                       WEB <TypingAnimation />
                     </p>
