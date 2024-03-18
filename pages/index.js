@@ -5,7 +5,7 @@ import Services from "@/src/components/Services";
 import { AlexioContext } from "@/src/Context";
 import Header from "@/src/Header";
 import Nav from "@/src/Nav";
-import { Fragment, useContext, useEffect } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 
 import ImageView from "@/src/components/popup/ImageView";
 import VideoPopup from "@/src/components/popup/VideoPopup";
@@ -49,7 +49,7 @@ const Index = () => {
       <ImageView />
       <Nav />
       <div className={`pages-stack ${toggle ? "pages-stack--open" : ""}`}>
-        <HomeBanner />
+        <HomeBanner userInfo={user?.user.about} />
         <AboutUs />
         <Services />
         <Portfolio />
